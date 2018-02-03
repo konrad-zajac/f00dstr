@@ -1,0 +1,123 @@
+@extends('layouts.app')
+@section('content')
+
+<title>index point 2.0</title>
+
+
+
+
+<div class="row">
+        <div class="col-12">
+                <div class="container">
+                        {{--<table class="table table-hover list-group tabela">--}}
+                                {{--<thead>--}}
+                                        {{--<tr>--}}
+                                                {{--<td colspan="5"></td>--}}
+                                                {{--<td>open</td>--}}
+                                                {{--<td colspan="5" class="importance">total score of:</td>--}}
+                                        {{--</tr>--}}
+                                        {{--<tr>--}}
+                                                {{--<th>id</th>--}}
+                                                {{--<th>name</th>--}}
+                                                {{--<th>city</th>--}}
+                                                {{--<th>address</th>--}}
+                                                {{--<th>telephone</th>--}}
+                                                {{--<th > hours</th>--}}
+                                                {{--<th class="e_imp impof_table_left">price</th>--}}
+                                                {{--<th class="e_imp">taste</th>--}}
+                                                {{--<th class="e_imp">music</th>--}}
+                                                {{--<th class="e_imp">variety</th>--}}
+                                                {{--<th class="e_imp impof_table_right">decor</th>--}}
+                                        {{--</tr>--}}
+                                {{--</thead>--}}
+
+                                {{--<tbody>--}}
+                                <div class="list-group">
+                                        <p class="list-group-item active naglowek_tabeli" >
+                                                list of all points
+
+                                        </p>
+
+
+
+                                @foreach($points as $point)
+                                        <a href="#" class="list-group-item  ">
+                                                <span class="komorka_w_liscie"> ID: {{$point->point_id}}</span>
+                                                <span class="komorka_w_liscie"> name: {{$point->point_name}}</span>
+                                                <span class="komorka_w_liscie"> city: {{$point->point_city}}</span>
+                                                <span class="komorka_w_liscie"> address: {{$point->point_address}}</span>
+                                                <span class="komorka_w_liscie"> telephone: {{$point->point_telephone}}</span>
+                                                <span class="komorka_w_liscie"> opening hours: {{$point->point_opening_houres}}</span>
+                                                <span class="komorka_w_liscie"> closing hours: {{$point->point_closing_houres}}</span>
+                                                </br>
+                                                <span class="komorka_w_liscie"> score in: price - {{$point->point_importance_of_price}}<p> taste: {{$point->point_importance_of_taste}}</p><p>                                                <span class="komorka_w_liscie"> </span>
+</p></span>
+                                                <span class="komorka_w_liscie"> decor: {{$point->point_importance_of_decor}}</span>
+                                                <span class="komorka_w_liscie"> music: {{$point->point_importance_of_music}}</span>
+                                                <span class="komorka_w_liscie"> variety: {{$point->point_importance_of_variety}}</span>
+
+                                        </a>
+                                        @endforeach
+
+
+
+                                {{--<tr>--}}
+                                {{-- 1 --}}
+                                {{--<td>--}}
+                                {{--{{$point->point_id}}--}}
+                                {{--</td>--}}
+                                {{-- 2 --}}
+                                {{--<td>--}}
+                                {{--{{$point->point_name}}--}}
+                                {{--</td>--}}
+                                {{-- 3 --}}
+                                {{--<td>--}}
+                                {{--{{$point->point_city}}--}}
+                                {{--</td>--}}
+                                {{-- 4 --}}
+                                {{--<td>--}}
+                                {{--{{$point->point_address}}--}}
+                                {{--</td>--}}
+                                {{-- 5 --}}
+                                {{--<td>--}}
+                                {{--{{$point->point_telephone}}--}}
+                                {{--</td>--}}
+                                {{-- 6 --}}
+                                {{--<td class="operation_hours">--}}
+                                {{--{{$point->point_opening_hours}} &nbsp&nbsp-&nbsp&nbsp {{$point->point_closing_hours}}--}}
+                                {{--</td>--}}
+
+                                {{-- 8 --}}
+                                {{--<td class="impof impof_table_left" >--}}
+                                {{--{{$point->point_importance_of_price}}--}}
+                                {{--</td>--}}
+                                {{-- 9 --}}
+                                {{--<td class="impof">--}}
+                                {{--{{$point->point_importance_of_taste}}--}}
+                                {{--</td>--}}
+                                {{-- 10 --}}
+                                {{--<td class="impof">--}}
+                                {{--{{$point->point_importance_of_music}}--}}
+                                {{--</td>--}}
+                                {{-- 11 --}}
+                                {{--<td class="impof" >--}}
+                                {{--{{$point->point_importance_of_variety}}--}}
+                                {{--</td>--}}
+                                {{-- 12 --}}
+                                {{--<td class="impof  impof_table_right">--}}
+                                {{--{{$point->point_importance_of_decor}}--}}
+                                {{--</td>--}}
+                                {{--</tr>--}}
+
+
+
+                                </tbody>
+                        </table>
+                {{--{{ $points->links() }}--}}
+                {{--<h2  class="text-center"> {{$point->count()}} users total</h2>--}}
+                {{--</div>--}}
+                </div>
+        </div>
+</div>
+
+@stop

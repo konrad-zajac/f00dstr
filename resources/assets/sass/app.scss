@@ -1,0 +1,168 @@
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+.white-text
+{
+	color:white;
+}
+.dwa_zera
+{
+    font-family: "AHAMONO", Georgia, Serif;
+    font-size:2vp;
+	color: $bad;
+}
+
+@media only screen and (max-width: 320px) {
+    html {
+resize: none;
+    }
+}
+body
+{
+
+	.navbar
+	{
+		background-color: $secondary_color;
+		.navbar-brand
+		{
+			color: $w;
+			&:hover
+			{
+				color: $bad;
+				.dwa_zera
+				{
+					color:$w;
+				}
+			}
+		}
+		.navbar-nav
+		{
+			.navbar-right
+			{
+				color: $w;
+			}
+		}
+		.glyphicon
+		{
+			color: $w;
+		}
+		.dropdown-toggle
+		{
+			color: $w;
+		}
+		
+	}
+}
+.dropdown
+{
+	.dropdown-toggle
+	{
+		color: $bad;
+
+		&:hover
+		{
+			color: black;
+		}
+	}
+}
+ul 
+{
+  list-style-type: none;
+}
+.footer
+{
+   border-top: 5px solid $secondary_color;	
+   background-color: $secondary_color;
+   .container
+   {
+   	   color: $w;
+
+   }
+   .navbar-brand
+      {
+   	   color: $w;
+
+   }
+}
+
+
+.li_w_poincie
+{
+	margin: 5px 0 0 0;
+			
+			max-height: 30px;
+
+
+	color: black;
+		  width: 180px;
+
+			display:inline-block;
+
+	.okragly_licznik
+	{
+		width: $rozmiary_okraglego_licznika;
+		height: $rozmiary_okraglego_licznika;
+		-moz-border-radius: $rozmiary_okraglego_licznika;
+		-webkit-border-radius: $rozmiary_okraglego_licznika;
+		border-radius: $rozmiary_okraglego_licznika;
+		font-size: 14px;
+	  float:left;
+
+	  color: $w;
+	  background: black;
+	  margin: 0 10px 10px 0;
+
+
+	}
+
+		.gly_i
+	{
+		margin-left: 20px;
+		margin-right: 15px;
+		display:inline-block;
+	}
+	  .etykieta
+	{
+
+		display:inline-block;
+	}
+}
+	.w-p-section1
+	{
+		margin-bottom: 5%;
+		img
+		{
+		width: $w-p-image1-width;
+		height: $w-p-image1-height;
+		}
+		.btn
+		{
+			position: absolute;
+			left: 62%;
+			top:42%;
+		}
+	}
+	
+	.w-p-section2
+	{
+			margin-bottom: 55%;
+
+		img
+		{
+		width: $w-p-image1-width;
+		height: $w-p-image1-height;
+		}
+		.btn
+		{
+			position: absolute;
+			left: 62%;
+			top:93%;
+		}
+	}
+	
