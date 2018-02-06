@@ -8,7 +8,7 @@
                     <table class="table table-hover">
                         <tr>
                             <td>id</td>
-                            <td>{{$point->point_id}}</td>
+                            <td>{{$point->id}}</td>
                         </tr>
                         <tr>
                             <td>city</td>
@@ -65,13 +65,13 @@
                     <div class="col-12 text-center">
 
                         <div class="col-2">
-                            <a href="{{ route('point.edit', ['id' => $point->point_id]) }}">
+                            <a href="{{ route('point.edit', ['id' => $point->id]) }}">
                                 <button type="button" class="btn btn-primary pull-left">Edit</button>
                             </a>
                         </div>
 
                         <div class="col-2">
-                                {{ Form::open(['route' => ['point.destroy', $point->point_id], 'method' => 'delete']) }}
+                                {{ Form::open(['route' => ['point.destroy', $point->id], 'method' => 'delete']) }}
                                 {{ Form::submit('Delete', array('class' => 'btn btn-danger pull-right','style' => 'inline-block','type' => 'button')) }}
                                 {{ Form::close() }}
                         </div>   

@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App;
 use App\Point;
 use Illuminate\Http\Request;
 
@@ -63,10 +62,7 @@ class PointController extends Controller
      */
     public function show($id)
     {
-        $point = Point::where('point_id', $id)->first();
-        if (is_null($point)) {
-            abort(404);
-        }
+        $point = Point::findOrFail($id);
         return view('point.show', compact('point'));
     }
 
@@ -78,7 +74,8 @@ class PointController extends Controller
      */
     public function edit($id)
     {
-        $point = Point::where('point_id', $id)->first();
+        //$point = Point::findOrFail('point_id');
+        $point = Point::findOrFail($id);
         return view('point.edit', compact('point'));
     }
 
@@ -89,9 +86,11 @@ class PointController extends Controller
      * @param  \App\Point  $point
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Point $point)
+    public function update($id, Request $request)
     {
-        //
+        $point = Point::findOrFail($id);
+        $point->update($request->all());
+        return redirect('point');
     }
 
     /**
@@ -102,8 +101,7 @@ class PointController extends Controller
      */
     public function destroy($id)
     {
-        App\Point::where('point_id', $id)->delete();
-
+        $point = Point::findOrFail($id);
         return redirect('point');
     }
 }

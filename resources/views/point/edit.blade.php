@@ -8,73 +8,59 @@
                 <div class="panel-heading"><span class="glyphicon glyphicon-plus" ></span>edit point ,,{{$point->point_name}}"</div>
 
                 <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('point.store') }}">
-                        {{ csrf_field() }}
+                    {{-- <form class="form-horizontal" method="POST" action="{{ route('point.store') }}">
+                        {{ csrf_field() }} --}}
+                            {!! Form::model($point,['method' => 'PATCH','action' => ['PointController@update', $point->id]]) !!}
 
-                        {{-- 1 --}}
-                        <div class="form-group">
-                            <label for="point_name" class="col-md-4 control-label"> Name</label>
+                            <!-- point_name form input-->
 
-                            <div class="col-md-6">
-                                <input id="point_name" type="text" class="form-control" name="point_name" value="{{$point->point_name}}" required>
+                            <div class=form-group>
+                            {!! form::label('point_name','Point name:') !!}
+                            {!! form::text('point_name',null,['class' => 'form-control']) !!}
+                            </div>
 
-                                </div>
-                        </div>
-                        {{-- 2 --}}
-                        <div class="form-group">
-                            <label for="point_city" class="col-md-4 control-label"> city</label>
+                            <!-- point_city form input-->
 
-                            <div class="col-md-6">
-                                <input id="point_city" type="text" class="form-control" name="point_city" value="{{$point->point_city}}" required>
-                                
+                            <div class=form-group>
+                            {!! form::label('point_city','Point city:') !!}
+                            {!! form::text('point_city',null,['class' => 'form-control']) !!}
+                            </div>
 
-                                </div>
-                        </div>
-                        {{-- 3 --}}
-                        <div class="form-group">
-                            <label for="point_address" class="col-md-4 control-label"> address</label>
+                            <!-- point_address form input-->
 
-                            <div class="col-md-6">
-                                <input id="point_address" type="text" class="form-control" name="point_address" value="{{$point->point_address}}" required>
+                            <div class=form-group>
+                            {!! form::label('point_address','Point address:') !!}
+                            {!! form::text('point_address',null,['class' => 'form-control']) !!}
+                            </div>
+                            <!-- point_telephone form input-->
 
-                                </div>
-                        </div>
-                        {{-- 4 --}}
-                        <div class="form-group">
-                            <label for="point_telephone" class="col-md-4 control-label"> telephone</label>
+                            <div class=form-group>
+                            {!! form::label('point_telephone','Point telephone:') !!}
+                            {!! form::text('point_telephone',null,['class' => 'form-control']) !!}
+                            </div>
+                            <!-- point_opening_hours form input-->
 
-                            <div class="col-md-6">
-                                <input id="point_telephone" type="text" class="form-control" name="point_telephone" value="{{$point->point_telephone}}" required>
+                            <div class=form-group>
+                            {!! form::label('point_opening_hours','Point opening hours:') !!}
+                            {!! form::text('point_opening_hours',null,['class' => 'form-control']) !!}
+                            </div>
+                            <!-- point_closing_hours form input-->
 
-                                </div>
-                        </div>
-                        {{-- 5 --}}
-                        <div class="form-group">
-                            <label for="point_opening_hours" class="col-md-4 control-label"> opening_hours</label>
+                            <div class=form-group>
+                            {!! form::label('point_closing_hours','Point closing hours:') !!}
+                            {!! form::text('point_closing_hours',null,['class' => 'form-control']) !!}
+                            </div>
 
-                            <div class="col-md-6">
-                                <input id="point_opening_hours" type="text" class="form-control" name="point_opening_hours" value="{{$point->point_opening_hours}}" required>
-
-                                </div>
-                        </div>
-                        {{-- 6 --}}
-                        <div class="form-group">
-                            <label for="point_closing_hours" class="col-md-4 control-label"> closing_hours</label>
-
-                            <div class="col-md-6">
-                                <input id="point_closing_hours" type="text" class="form-control" name="point_closing_hours" value="{{$point->point_closing_hours}}" required>
-
-                                </div>
-                        </div>
-                        {{-- 7 --}}
-                        <div class="form-group">
+                        {!! Form::submit('ok', ['class' => 'btn-primary form-control' ]) !!} 
+                        {!! Form::close() !!}  
+                        {{-- <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
                                     Finish edit
                                 </button>
                             </div>
                         </div>
-                    </form>
+                    </form> --}}
                                  </div>
             </div>
         </div>

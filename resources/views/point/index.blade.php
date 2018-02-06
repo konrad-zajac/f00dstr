@@ -24,13 +24,13 @@
                        <tr class="krotka">
                             {{-- 1 --}}
                             <td>
-                                {{$point->point_id}}
+                                {{$point->id}}
                             </td>
                             {{-- 2 --}}
                             <td>
-                                {{-- <a href="{{ route('point.show', ['id' => $point->point_id]) }}"> --}}
-                                {{-- <a href="{{ action('PointController@show',[$point->point_id]) }}"> --}}
-                                <a href="{{ url('/point',$point->point_id) }}">
+                                {{-- <a href="{{ route('point.show', ['id' => $point->id]) }}"> --}}
+                                {{-- <a href="{{ action('PointController@show',[$point->id]) }}"> --}}
+                                <a href="{{ url('/point',$point->id) }}">
                                 </a>
                                   {{$point->point_name}}
                             </td>
