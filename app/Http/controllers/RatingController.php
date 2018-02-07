@@ -26,7 +26,7 @@ class RatingController extends Controller
      */
     public function create()
     {
-        $points = Point::paginate(4);
+        $points = Point::all();
         return view('rating.create', compact('points'));
     }
 

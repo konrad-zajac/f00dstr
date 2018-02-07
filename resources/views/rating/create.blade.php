@@ -7,25 +7,74 @@
                 <div class="panel panel-primary">
                     <div class="panel-heading">Rate</div>
                         <div class="panel-body">
-                            {!! Form::open() !!}
+                            {!! Form::open(['url' => 'rating/store']) !!}
 
                             <!-- Name form input-->
                             
-                            <div class=form-group>
+                            <div class='form-group'>
                             {!! form::label('Name','Name') !!}
                             {!! form::text('Name',null,['class' => 'form-control']) !!}
                             </div>
+
                             <!-- Rating of taste form radiobutton-->
                             
-                            <div class=form-group>
-                            {!! form::label('Rating of taste','Rating of taste') !!}
-                            {!! form::radio('Rating of taste',@1,['class' => 'form-control']) !!}
-                            {!! form::radio('Rating of taste',@1,['class' => 'form-control']) !!}
-                            {!! form::radio('Rating of taste',@1,['class' => 'form-control']) !!}
-                            {!! form::radio('Rating of taste',@1,['class' => 'form-control']) !!}
-                            {!! form::radio('Rating of taste',@1,['class' => 'form-control']) !!}
-                            {!! form::radio('Rating of taste',@1,['class' => 'form-control']) !!}
+                            <div class='form-group'>
+								{!! form::label('Rating of taste','Rating of taste') !!}
+								{!! form::radio('Rating of taste',1,['class' => 'form-control']) !!}
+								{!! form::radio('Rating of taste',2,['class' => 'form-control']) !!}
+								{!! form::radio('Rating of taste',3,['class' => 'form-control']) !!}
+								{!! form::radio('Rating of taste',4,['class' => 'form-control']) !!}
+								{!! form::radio('Rating of taste',5,['class' => 'form-control']) !!}
+								{!! form::radio('Rating of taste',6,['class' => 'form-control']) !!}
                             </div>
+                            <!-- Rating of price form radiobutton-->
+                            
+                            <div class='form-group'>
+								{!! form::label('Rating of price','Rating of price') !!}
+								{!! form::radio('Rating of price',1,['class' => 'form-control']) !!}
+								{!! form::radio('Rating of price',2,['class' => 'form-control']) !!}
+								{!! form::radio('Rating of price',3,['class' => 'form-control']) !!}
+								{!! form::radio('Rating of price',4,['class' => 'form-control']) !!}
+								{!! form::radio('Rating of price',5,['class' => 'form-control']) !!}
+								{!! form::radio('Rating of price',6,['class' => 'form-control']) !!}
+                            </div>
+                            
+                            <!-- Rating of music form radiobutton-->
+                            
+                            <div class='form-group'>
+								{!! form::label('Rating of music','Rating of music') !!}
+								{!! form::radio('Rating of music',1,['class' => 'form-control']) !!}
+								{!! form::radio('Rating of music',2,['class' => 'form-control']) !!}
+								{!! form::radio('Rating of music',3,['class' => 'form-control']) !!}
+								{!! form::radio('Rating of music',4,['class' => 'form-control']) !!}
+								{!! form::radio('Rating of music',5,['class' => 'form-control']) !!}
+								{!! form::radio('Rating of music',6,['class' => 'form-control']) !!}
+                            </div>
+                            
+                            <!-- Rating of decor form radiobutton-->
+                            
+                            <div class='form-group'>
+								{!! form::label('Rating of decor','Rating of decor') !!}
+								{!! form::radio('Rating of decor',1,['class' => 'form-control']) !!}
+								{!! form::radio('Rating of decor',2,['class' => 'form-control']) !!}
+								{!! form::radio('Rating of decor',3,['class' => 'form-control']) !!}
+								{!! form::radio('Rating of decor',4,['class' => 'form-control']) !!}
+								{!! form::radio('Rating of decor',5,['class' => 'form-control']) !!}
+								{!! form::radio('Rating of decor',6,['class' => 'form-control']) !!}
+                            </div>
+                            
+                            <!-- Rating of variety form radiobutton-->
+                            
+                            <div class='form-group'>
+								{!! form::label('Rating of variety','Rating of variety') !!}
+								{!! form::radio('Rating of variety',1,['class' => 'form-control']) !!}
+								{!! form::radio('Rating of variety',2,['class' => 'form-control']) !!}
+								{!! form::radio('Rating of variety',3,['class' => 'form-control']) !!}
+								{!! form::radio('Rating of variety',4,['class' => 'form-control']) !!}
+								{!! form::radio('Rating of variety',5,['class' => 'form-control']) !!}
+								{!! form::radio('Rating of variety',6,['class' => 'form-control']) !!}
+                            </div>
+                            
                             
                             {!! Form::submit('send', ['class' => 'btn-primary form-control' ]) !!}
                             
